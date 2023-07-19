@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hellonong/util/color_schemes.g.dart';
 
+import 'mypage.dart';
+
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
 
@@ -22,17 +24,26 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+
         backgroundColor: Theme.of(context).colorScheme.primary,
         actions: [
-          Icon(
-            Icons.list_alt_rounded,
-            size: 40,
-            color: Colors.white,
+          IconButton(
+              onPressed: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context) => MyHomePage() //page 간 이동
+                ));},
+              icon:Icon(
+                Icons.list_alt_rounded,
+                size: 40,
+                color: Colors.white,
+              )
           ),
-          Icon(
-            Icons.person_outline,
-            size: 40,
-            color: Colors.white,
+          IconButton(
+            onPressed: (){Navigator.push(context,MaterialPageRoute(builder: (context) => MyPage()));},
+              icon:Icon(
+                Icons.person_outline,
+                size: 40,
+                color: Colors.white,
+              )
           )
         ],
       ),
