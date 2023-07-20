@@ -63,7 +63,7 @@ class _MyPageState extends State<MyPage> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        dateData[index]["date"],
+                        '${index + 1}. ' + dateData[index]["date"],
                         style: TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.bold
